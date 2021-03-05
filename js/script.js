@@ -227,6 +227,33 @@ $(document).ready(function () {
     return false;
   }
 
+  function direction(x, y) {
+    var head_x = snake_array[0].x * cw;
+    var head_y = snake_array[0].y * cw;
+    var displacement_x = Math.abs(x - head_x);
+    var displacement_y = Math.abs(y - head_y);
+    if(displacement_x > displacement_y && d != "right" && d != "left") {
+      if(x < head_x && d != "right") {
+        return "left";
+      } else if (x > head_x && d != "left") {
+        return "right";
+      }
+    } else if(d != "up" && d != "down"){
+      if (y > head_y && d != "down") {
+        return "up";
+      } else if(y < head_y && d != "up"){
+        return "down";
+      }
+    }
+    return d;
+  }
+  $(document).on("touchstart", function(e) {
+    e.preventDefault();
+    touchEvent = e.originalEvent.touches[0]
+    d = direction(touchEvent.pageX, touchEvent.pageY)
+  })
+
+
   $(document).keydown(function (e) {
     var key = e.which;
 
