@@ -80,6 +80,9 @@ $(document).ready(function () {
   // Canvas variables
   var canvas = $("#canvas")[0];
   var ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
   var w = $("#canvas").width();
   var h = $("#canvas").height();
 
@@ -141,10 +144,10 @@ $(document).ready(function () {
 
     // when to restart game
     if (
-      (head_x == -1 ||
-      head_x == w / cw ||
-      head_y == -1 ||
-      head_y == h / cw ||
+      (head_x <= -1 ||
+      head_x >= w / cw ||
+      head_y <= -1 ||
+      head_y >= h / cw ||
       collision(head_x, head_y, snake_array)) &&
       !game_done
     ) {
@@ -152,15 +155,16 @@ $(document).ready(function () {
       stop_audio();
       var question = questions[Math.floor(Math.random()*(questions.length))]
       $("#modal").removeClass("hidden")
+      $('#canvas').addClass("hidden")
       $('#result').addClass("hidden")
       $('#game').addClass("hidden")
       $("#title").text(question.title)
       $("#question").text(question.question)
       $('#choice-a').next('label').text(question.a)
       $('#choice-b').next('label').text(question.b)
-      var result = "You chose the "
       $('input[name="choices"]').attr("checked", false)
       $('#answer').click(()=> {
+        var result = "You chose the "
         if(question.correct === $('input[name="choices"]:checked').val()) {
           result = result + "Correct answer!"
         } else {
@@ -172,6 +176,7 @@ $(document).ready(function () {
       })
       
       $('#game').click(() => {
+        $('#canvas').removeClass("hidden")
         $("#modal").addClass("hidden")
         initial()
         

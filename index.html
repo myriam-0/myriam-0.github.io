@@ -12,24 +12,25 @@
 </head>
 
 <body>
-  <canvas id="canvas" width="700" height="600"> </canvas>
+  <canvas id="canvas" width="4000" height="500"></canvas>
   <div id="modal" class="hidden">
-    <p1 id="title"></p1>
-    <p id="question"></p>
-    <input type="radio" id="choice-a" name="choices" value="a">
-    <label for="choice-a"></label><br>
-    <input type="radio" id="choice-b" name="choices" value="b">
-    <label for="choice-b"></label><br>
-    <button id="answer">Answer</button>
-    <p id="result"></p>
-    <button id="game">New Game</button>
+	<div class="container">
+      <h1 id="title"></h1>
+      <p id="question"></p>
+      <input type="radio" id="choice-a" name="choices" value="a">
+      <label for="choice-a"></label><br>
+      <input type="radio" id="choice-b" name="choices" value="b">
+      <label for="choice-b"></label><br>
+      <button id="answer">Answer</button>
+      <p id="result"></p>
+      <button id="game">New Game</button>
+	</div>
   </div>
   <div style="display:none;"> 
     <img id="apple-img"
          src="https://assets.codepen.io/5700655/png+image+code.png"
          width="100" height="100"/>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
