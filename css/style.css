@@ -1,0 +1,74 @@
+body {background-color: black;}
+  
+#canvas {
+  display: block;
+  margin: 35px auto;
+  border: 2px solid black;
+}
+
+#modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+p1{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 200px;
+  width: 50%;
+  border: 3px  solid blue; 
+  border-radius: 25px;
+  padding: 200px;
+  text-align: center;
+}
+
+p{
+  
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: width/4;
+  margin: 20px 150px 0px 360px;
+
+}
+
+input{
+
+  font-family: Arial, Helvetica, sans-serif;
+   margin: 20px 100px 0px 452px;
+     color: white;
+ 
+}
+
+label{
+  
+   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:16px;
+  margin: 0px 100px 0px -100px;
+  
+}
+  
+button{
+    
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 100px 0px 461px;
+    font-size: 16px;
+    border-radius: 12px;
+ 
+  }
+
+button:hover {
+  background-color: #87CEFA; /* Green */
+  color: white;
+  
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
