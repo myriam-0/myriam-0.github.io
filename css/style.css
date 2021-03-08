@@ -31,7 +31,7 @@ body {
 }
 
 #modal .container {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-family: Arial, Helvetica, sans-serif;
@@ -47,8 +47,7 @@ body {
 
 #seconddiv{
   
-  width: 400;
-  height: 300;
+ 
   top: 354px;
   left: 20px; 
   color: #87CEFA; 
@@ -60,8 +59,7 @@ body {
 }
 
 #thirddiv {
-   width: 400;
-  height: 300;
+  
   top: 354px;
   left: 1800px; 
   color: #87CEFA; 
@@ -112,3 +110,4 @@ button:hover {
   visibility: hidden;
   display: none;
 }
+
