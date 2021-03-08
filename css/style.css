@@ -82,17 +82,19 @@ button:hover {
   
 }
 
-.hidden {
-  visibility: hidden;
-  display: none;
-}
-
 #seconddiv{
   
  
   top: 700px
   color: #87CEFA; 
   font-family: Arial, Helvetica, sans-serif;
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+
 
   
 
