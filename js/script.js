@@ -268,4 +268,3 @@ $(document).ready(function () {
     else if (key == "40" && d != "down") d = "up";
   });
 });
-
