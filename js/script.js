@@ -203,9 +203,10 @@ $(document).ready(function () {
     }
 
     paint_food(food.x, food.y);
-
+    var python_game = "The Python Game";
     var score_text = "Score: " + score;
     var level_text = "Level: " + level;
+    ctx.fillText(python_game, 5, h - 30);
     ctx.fillText(score_text, 5, h - 5);
     ctx.fillText(level_text, 100, h -5);
     ctx.font = "20px Verdana";
